@@ -1,0 +1,110 @@
+:root {
+    --base: #FFFFFF;
+    --borderColor: #ff0000;
+    --cardColors: rgb(255, 255, 255);
+    --accentColor: #ff0000; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    font-family: "Special Gothic", sans-serif;
+}
+
+
+body {
+    background-color: #000000;
+    background-image: url('./assets/css-pattern-by-magicpattern.png');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 40px 60px;
+}
+
+
+header {
+    background-color: var(--cardColors);
+    border: 5px solid var(--borderColor);
+    width: 50%;
+    margin-bottom: 32px;
+    font-size: 32px; 
+    font-weight: 700;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h2 {
+    display: inline-block;
+    font-family: "Special Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 8px 16px;
+    margin-bottom: 24px;
+
+    border-bottom: 5px solid var(--accentColor);
+    background: var(--cardColors);
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.cards div {
+    background-color: var(--cardColors);
+    padding: 20px; 
+    border: 5px solid var(--borderColor);
+    border-radius: 6px;
+    width: 90%; 
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+
+.cards div:hover {
+    transform: translateX(10px);
+    box-shadow: 10px 8px var(--accentColor);
+}
+
+
+.cards div > img {
+    width: 25%;
+    display: block;
+    margin: auto; 
+}
+
+.art-row {
+    display: flex;
+}
+
+.card .art-row {
+    border: none;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+
+footer {
+    margin-top: 60px;
+    padding: 24px;
+    text-align: center;
+
+    background-color: var(--cardColors);
+    border: 3px solid var(--borderColor);
+
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
