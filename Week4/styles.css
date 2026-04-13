@@ -1,0 +1,110 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: black;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.navbar button {
+  color: white;
+  background: none;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+
+.navbar button:hover {
+  background-color: white;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr; 
+  background: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap; 
+  margin-top: 1rem;
+}
+
+.btn-group button {
+  padding: 0.5rem;
+}
+
+.card:nth-child(1):hover {
+  box-shadow: 0 0 15px green;
+}
+
+.card:nth-child(2):hover {
+  box-shadow: 0 0 15px blue;
+}
+
+.card:nth-child(3):hover {
+  box-shadow: 0 0 15px red;
+}
+
+.card:nth-child(4):hover {
+  box-shadow: 0 0 15px orange;
+}
+
+@media (max-width: 720px) {
+
+  :root {
+    font-size: 12px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .card {
+    width: 100%;
+  }
+}
