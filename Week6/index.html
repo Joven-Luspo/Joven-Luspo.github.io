@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Watchlist Dashboard</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 id="greeting"></h1>
+
+    <button id="theme-btn">Toggle Mode</button>
+
+    <section>
+      <h3>Favorite Anime</h3>
+      <input id="fav-anime" placeholder="Type anime name...">
+      <p id="output"></p>
+    </section>
+
+    <section>
+      <h3>Watchlist</h3>
+      <input id="anime-input" placeholder="Add anime...">
+      <button id="add-btn">Add</button>
+      <ul id="watchlist"></ul>
+    </section>
+
+    <section>
+      <div id="anime-box">Hello!</div>
+    </section>
+
+  </div>
+
+  <script>
+    const greeting = document.getElementById("greeting");
+    const hour = new Date().getHours();
+
+    if (hour < 12) greeting.textContent = "Good Morning";
+    else if (hour < 18) greeting.textContent = "Good Afternoon";
+    else greeting.textContent = "Good Night";
+
+    document.getElementById("theme-btn").addEventListener("click", function () {
+      document.body.classList.toggle("light");
+    });
+
+    const favInput = document.getElementById("fav-anime");
+    const output = document.getElementById("output");
+
+    favInput.addEventListener("input", function () {
+      output.textContent = "Your favorite anime is: " + favInput.value;
+    });
+
+    document.getElementById("add-btn").addEventListener("click", function () {
+      const input = document.getElementById("anime-input");
+
+      if (input.value.trim() === "") return;
+
+      const li = document.createElement("li");
+      li.textContent = input.value;
+
+      li.addEventListener("click", function () {
+        li.remove();
+      });
+
+      document.getElementById("watchlist").appendChild(li);
+      input.value = "";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: black;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+body.light {
+  background: #f4f4f4;
+  color: black;
+}
+
+h1 {
+  color: red;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 10px 0;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: red;
+}
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+}
+
+#watchlist {
+  list-style: none;
+  padding: 0;
+}
+
+#watchlist li {
+  margin: 5px auto;
+  padding: 8px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 80%;
+}
+
+#watchlist li:hover {
+  color: black;
+  transform: scale(1.05);
+}
+
+#anime-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+#anime-box:hover {
+  background: red;
+  color: black;
+}
+
+body.light #anime-box {
+  background: white;
+  color: white;
+}
+
+body.light #anime-box:hover {
+  background: red;
+  color: black;
+}
